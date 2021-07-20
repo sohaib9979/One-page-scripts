@@ -32,18 +32,18 @@ class DreamTeacher(Teacher):
  
 t, h, e, _ = map(eval, ['maxsize'] * 4)
 students = {'knowledge': 0, 'inspiration': 0, 'fun': 0}
- 
+
 our_teacher = DreamTeacher('Ines', 'Ivanova', t=h, e=_, b=e, s=t)
- 
+
 while our_teacher.full_name == 'Ines Ivanova':
  
-    for quality in students.keys():
-        students[quality] += 1
-       
+    for quality, value in students.items():
+        value += 1
+
     try:
         print(our_teacher)
     except:
         print("Just kidding. There's no way to raise exception in this case!")
- 
+
     next_lesson = eval(input())
     # TODO MORE LESSONS!
